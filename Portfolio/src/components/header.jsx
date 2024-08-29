@@ -1,49 +1,4 @@
-function selected() {
-  var targeted = event.target;
-  var clicked = targeted.parentElement;
-
-  var child = clicked.children;
-  console.log(child);
-
-  for (let i = 0; i < child.length; i++) {
-    if (child[i].classNameList.contains("text-white")) {
-      console.log(child[i]);
-      child[i].classNameList.remove("text-white", "bg-indigo-600");
-      child[i].classNameList.add(
-        "text-gray-600",
-        "bg-gray-50",
-        "border",
-        "border-white"
-      );
-    }
-  }
-
-  targeted.classNameList.remove(
-    "text-gray-600",
-    "bg-gray-50",
-    "border",
-    "border-white"
-  );
-  targeted.classNameList.add("text-white", "bg-indigo-600");
-}
-
-function selectNew() {
-  var newL = document.getElementById("list");
-  newL.classNameList.toggle("hidden");
-
-  document.getElementById("ArrowSVG").classNameList.toggle("rotate-180");
-}
-
-function selectedSmall() {
-  var text = event.target.innerText;
-  var newL = document.getElementById("list");
-  var newText = document.getElementById("textClicked");
-  newL.classNameList.add("hidden");
-  document.getElementById("ArrowSVG").classNameList.toggle("rotate-180");
-  newText.innerText = text;
-
-  document.getElementById("s1").classNameList.remove("hidden");
-}
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
@@ -59,12 +14,18 @@ function Header() {
                     </div>
     
                     <ul className="hidden md:flex flex-auto space-x-2">
-                        <li onClick="selected()" className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white bg-indigo-600 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded">Collections</li>
-                        <li onClick="selected()" className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded">Arts</li>
-                        <li onClick="selected()" className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded">Space</li>
-                        <li onClick="selected()" className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded">Game</li>
-                        <li onClick="selected()" className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded">Utility</li>
-                        <li onClick="selected()" className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded">Cards</li>
+                        <li className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white bg-indigo-600 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded">
+                            <Link to="/">About me</Link>
+                            </li>
+                        <li className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded">
+                            <Link to="portfolio">Portfolio</Link>
+                            </li>
+                        <li className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded">
+                            <Link to="contact">Contact</Link>
+                            </li>
+                        <li className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded">
+                            <Link to="resume"> Resume </Link>
+                        </li>
                     </ul>
                     <div className=" flex space-x-5 justify-center items-center pl-2">
                         <div className="relative cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 ">
@@ -84,7 +45,7 @@ function Header() {
                 {/* <!-- for smaller devcies --> */}
     
                 <div className="block md:hidden w-full mt-5 ">
-                    <div onClick="selectNew()" className="cursor-pointer px-4 py-3 text-white bg-indigo-600 rounded flex justify-between items-center w-full">
+                    <div className="cursor-pointer px-4 py-3 text-white bg-indigo-600 rounded flex justify-between items-center w-full">
                         <div className="flex space-x-2">
                             <span id="s1" className="font-semibold text-sm leading-3 hidden">Selected: </span><p id="textClicked" className="font-normal text-sm leading-3 focus:outline-none hover:bg-gray-800 duration-100 cursor-pointer ">Collections</p>
                         </div>
@@ -94,11 +55,11 @@ function Header() {
                     </div>
                     <div className=" relative">
                         <ul id="list" className=" hidden font-normal text-base leading-4 absolute top-2  w-full rounded shadow-md">
-                            <li onClick="selectedSmall()" className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">Arts</li>
-                            <li onClick="selectedSmall()" className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">Space</li>
-                            <li onClick="selectedSmall()" className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">Game</li>
-                            <li onClick="selectedSmall()" className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">Utility</li>
-                            <li onClick="selectedSmall()" className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">Cards</li>
+                            <li className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">Arts</li>
+                            <li className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">Space</li>
+                            <li className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">Game</li>
+                            <li className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">Utility</li>
+                            <li className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">Cards</li>
                         </ul>
                     </div>
                 </div>

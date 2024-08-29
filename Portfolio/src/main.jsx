@@ -3,28 +3,29 @@ import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import Home from './pages/Home.jsx'
+import Portfolio from './pages/Portfolio.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import Resume from './pages/Resume.jsx'
+import ErrorPage from './pages/ErrorPage.jsx'
 
 const router = createBrowserRouter([
   {
     path:'/',
     element:<App />,
-    // TODO errorElement:
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
-        element: <Home />
-      },
-      {
-        path: 'about',
         element: <About />
       },
       {
         path: 'contact',
         element: <Contact />
+      },
+      {
+        path: 'portfolio',
+        element: <Portfolio />
       },
       {
         path: 'resume',
