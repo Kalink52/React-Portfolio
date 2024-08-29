@@ -6,7 +6,6 @@
 }
 
 .body {
-  display: flex;
+
   min-height: 65vh;
 }
-
