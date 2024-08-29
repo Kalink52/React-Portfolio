@@ -1,3 +1,11 @@
+// TODO
+// WHEN I view the header
+// THEN I am presented with the developer's name and navigation with titles corresponding to different sections of the portfolio
+// WHEN I view the navigation titles
+// THEN I am presented with the titles About Me, Portfolio, Contact, and Resume, and the title corresponding to the current section is highlighted
+// WHEN I click on a navigation title
+// THEN the browser URL changes and I am presented with the corresponding section below the navigation and that title is highlighted
+
 import { Link } from 'react-router-dom';
 
 function Header() {
@@ -23,9 +31,11 @@ function Header() {
                         <li className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded">
                             <Link to="contact">Contact</Link>
                             </li>
+                            {/* TODO get resume on click */}
                         <li className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-gray-600 border border-white bg-gray-50 cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded">
-                            <Link to="resume"> Resume </Link>
+                        <a href='src/assets/resume/Resume2024.pdf' > Resume </a>
                         </li>
+
                     </ul>
                     <div className=" flex space-x-5 justify-center items-center pl-2">
                         <div className="relative cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 ">

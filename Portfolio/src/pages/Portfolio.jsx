@@ -1,83 +1,87 @@
+// TODO
+// WHEN I am presented with the Portfolio section
+// THEN I see titled images of six of the developer’s applications with links to both the deployed applications and the corresponding GitHub repositories
+import {
+    Card,
+    CardBody,
+    CardFooter,
+    Typography,
+    Button,
+  } from "@material-tailwind/react";
+
+  const portfolioList = [
+    {
+        id: 1,
+        title: 'Unreal Engine',
+        description: 'Here is my projects using UE4 and their public status',
+        pictureURL: 'src/assets/portfolioPictures/UnrealEngine.PNG'
+    },
+    {
+        id: 2,
+        title: 'Unreal Engine',
+        description: 'Here is my projects using UE4 and their public status',
+        pictureURL: 'src/assets/portfolioPictures/UnrealEngine.PNG'
+    },
+    {
+        id: 3,
+        title: 'Unreal Engine',
+        description: 'Here is my projects using UE4 and their public status',
+        pictureURL: 'src/assets/portfolioPictures/UnrealEngine.PNG'
+    },
+    {
+        id: 4,
+        title: 'Unreal Engine',
+        description: 'Here is my projects using UE4 and their public status',
+        pictureURL: 'src/assets/portfolioPictures/UnrealEngine.PNG'
+    },
+    {
+        id: 5,
+        title: 'Unreal Engine',
+        description: 'Here is my projects using UE4 and their public status',
+        pictureURL: 'src/assets/portfolioPictures/UnrealEngine.PNG'
+    },
+    {
+        id: 6,
+        title: 'Unreal Engine',
+        description: 'Here is my projects using UE4 and their public status',
+        pictureURL: 'src/assets/portfolioPictures/UnrealEngine.PNG'
+    },
+  ]
+
 function Portfolio () {
+
+const portfolioCardList = portfolioList.map((portfolio) => {
+    return(
+    <Card key={portfolio.id} className="mt-5 w-96 ">
+    <CardBody>
+    <Typography color="blue-gray" className="relative h-56">
+    <img
+        src={portfolio.pictureURL}
+        alt="card-image"
+    />
+    </Typography>
+    <Typography variant="h5" color="blue-gray" className="mb-2">
+    {portfolio.title}
+    </Typography>
+    <Typography>
+    {portfolio.description}
+    </Typography>
+    </CardBody>
+    <CardFooter className="pt-0">
+    <Button>Read More</Button>
+    </CardFooter>
+</Card>)
+})
+
+
+
     return(
         <>
-<container className="grid grid-flow-row grid-cols-2 grid-rows-3 pt-10 justify-items-stretch gap-10 px-20">
-
-
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <a href="#">
-            <img className="rounded-t-lg" src="src/assets/portfolioPictures/UnrealEngine.PNG" alt="picture goes here" />
-        </a>
-        <div className="p-5">
-            <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Unreal Engine</h5>
-            </a>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here is my projects using UE4 and their public status</p>
-            <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Read more
-                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
-            </a>
-        </div>
-    </div>
-
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <a href="#">
-            <img className="rounded-t-lg" src="src/assets/portfolioPictures/UnrealEngine.PNG" alt="" />
-        </a>
-        <div className="p-5">
-            <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Unreal Engine</h5>
-            </a>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here is my projects using UE4 and their public status</p>
-            <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Read more
-                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
-            </a>
-        </div>
-    </div>
-
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <a href="#">
-            <img className="rounded-t-lg" src="src/assets/portfolioPictures/UnrealEngine.PNG" alt="" />
-        </a>
-        <div className="p-5">
-            <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Unreal Engine</h5>
-            </a>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here is my projects using UE4 and their public status</p>
-            <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Read more
-                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
-            </a>
-        </div>
-    </div>
-
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <a href="#">
-            <img className="rounded-t-lg" src="src/assets/portfolioPictures/UnrealEngine.PNG" alt="" />
-        </a>
-        <div className="p-5">
-            <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Unreal Engine</h5>
-            </a>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here is my projects using UE4 and their public status</p>
-            <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Read more
-                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
-            </a>
-        </div>
-    </div>
-
-    
+<container className="grid grid-flow-row grid-cols-2 grid-rows-3 py-10  gap-10 px-20 justify-items-center">
+    {portfolioCardList}
 </container>
+    
+
         </>
     )
 }

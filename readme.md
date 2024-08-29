@@ -5,3 +5,4 @@
 - tailwind component:
   - https://www.creative-tim.com/twcomponents/component/footer-2
   - https://www.creative-tim.com/twcomponents/component/free-tailwind-css-header-component
+  - https://www.creative-tim.com/twcomponents/component/tailwind-css-reservation-form
