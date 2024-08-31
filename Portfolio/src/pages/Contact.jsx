@@ -88,7 +88,7 @@ function Contact () {
             htmlFor="text"
             className="mb-3 block text-base font-medium text-[#07074D] dark:text-white"
         > Message</label>
-        <Textarea className="dark:bg-white">Test</Textarea>
+        <Textarea className="dark:bg-white"></Textarea>
       </div>
 
 
