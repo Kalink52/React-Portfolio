@@ -6,8 +6,8 @@
 // WHEN I click on a navigation title
 // THEN the browser URL changes and I am presented with the corresponding section below the navigation and that title is highlighted
 import { NavLink } from 'react-router-dom';
-import { Button, select } from '@material-tailwind/react';
-import { useState } from 'react';
+import darkMode from "../utilities/darkmode"
+import Toggle from './CustomTailwind/toggle';
 
 const navList = [
     {
@@ -68,11 +68,12 @@ function Header() {
                 >
                  Resume 
                 </a>
+            <Toggle onClick={darkMode}/>
+            {/* <Button onClick={darkMode}>Light mode</Button> */}
             </div>
         </nav>
     </div>
 </div>
-        
 
 </>
     )

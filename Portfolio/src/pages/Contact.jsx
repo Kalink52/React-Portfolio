@@ -5,105 +5,83 @@
 // THEN I receive a notification that this field is required
 // WHEN I enter text into the email address field
 // THEN I receive a notification if I have entered an invalid email address
-import {Textarea} from "@material-tailwind/react"
-function Contact () {
-    return(
-        <>
-<div className="flex items-center justify-center p-12">
-  {/* <!-- Author: FormBold Team -->
-  <!-- Learn More: https://formbold.com --> */}
-  <div className="mx-auto w-full max-w-[550px]">
-    <form 
-    //TODO action="https://formbold.com/s/FORM_ID" method="POST" CHANGE THIS
-    >
-      <div className="-mx-3 flex flex-wrap">
-        <div className="w-full px-3 sm:w-1/2">
-          <div className="mb-5">
-            <label
-              htmlFor="fName"
-              className="mb-3 block text-base font-medium text-[#07074D] dark:text-white"
-            >
-              First Name
-            </label>
-            <input
-              type="text"
-              name="fName"
-              id="fName"
-              placeholder="First Name"
-              className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-            />
-          </div>
-        </div>
-        <div className="w-full px-3 sm:w-1/2">
-          <div className="mb-5">
-            <label
-              htmlFor="lName"
-              className="mb-3 block text-base font-medium text-[#07074D] dark:text-white"
-            >
-              Last Name
-            </label>
-            <input
-              type="text"
-              name="lName"
-              id="lName"
-              placeholder="Last Name"
-              className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-            />
-          </div>
-        </div>
-      </div>
+import {
+  Card,
+  Input,
+  Checkbox,
+  Button,
+  Typography,
+  Textarea
+} from "@material-tailwind/react";
+import { useState } from "react";
+ 
+export default function SimpleRegistrationForm() {
+  const [termsAccepted, setTermsAccepted] = useState(false)
+  const [firstNameValid, setFirstNameValid] = useState(false)
+  // const [termsAccepted, setTermsAccepted] = useState(false)
 
+  function handleClick() {
+    if (termsAccepted === false){
+      setTermsAccepted(true)
+    }
+    if(termsAccepted === true) {
+      setTermsAccepted(false)
+    }
+  }
 
-      <div className="mb-5">
-        <label
-          htmlFor="email"
-          className="mb-3 block text-base font-medium text-[#07074D] dark:text-white"
-        >
-          What is your email?
-        </label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="something@something.com"
-          min="0"
-          className="w-full appearance-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+  return (
+     <Card className="items-center" color="transparent" shadow={false}>
+      <Typography variant="h4" color="blue-gray">
+        Contact Me
+      </Typography>
+      <Typography color="gray" className="mt-1 font-normal">
+        Nice to meet you! Enter your information and message
+      </Typography>
+      
+      <form className=" block mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+        <div className="mb-1 flex flex-col gap-6">
+          <Input
+            size="lg"
+            placeholder="First and Last Name"
+            label="First and Last Name"
+            className="invalid:text-red-800"
+            pattern="^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)"
+            onInvalid={(valid) => {console.log(valid) }}
+          />
+          <Input
+            size="lg"
+            placeholder="name@mail.com"
+            label="Email"
+            className="invalid:text-red-800"
+            pattern="[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]{2,}"
+          />
+          <Textarea required label="Message" />
+        </div>
+        <Checkbox
+          defaultChecked={false}
+          onClick={handleClick}
+          label={
+            <Typography
+              variant="small"
+              color="gray"
+              className="flex items-center font-normal"
+            >
+              I agree the
+              <a
+                onClick={() => alert('todo')}
+                href="#"
+                className="font-medium text-blue-700 transition-colors hover:text-gray-900"
+              >
+                &nbsp;Terms and Conditions
+              </a>
+            </Typography>
+          }
+          containerProps={{ className: "-ml-2.5" }}
         />
-      </div>
-
-        <div className="mb-5">
-        {/* <label
-            htmlFor="text"
-            className="mb-3 block text-base font-medium text-[#07074D] dark:text-white"
-        >
-            Comments
-        </label>
-        <input
-            type="text"
-            name="text"
-            id="text"
-            className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-        /> */}
-        <label
-            htmlFor="text"
-            className="mb-3 block text-base font-medium text-[#07074D] dark:text-white"
-        > Message</label>
-        <Textarea className="dark:bg-white"></Textarea>
-      </div>
-
-
-      <div>
-        <button
-          className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
-        >
-          Submit
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
-        </>
-    )
+        <Button className="mt-6" fullWidth disabled={!termsAccepted}>
+          Send Email
+        </Button>
+      </form>
+    </Card>
+  );
 }
-
-export default Contact
