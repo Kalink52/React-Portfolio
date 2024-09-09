@@ -7,19 +7,19 @@
 const paragraphWithPictureList = [
   {
     id: 1,
-    imageUrl: "public/assets/aboutPictures/selfieP.jpg",
+    imageUrl: "/assets/aboutPictures/selfieP.jpg",
     paragraph:
       "In the digital cosmos where algorithms dance and virtual worlds thrive, Micah Cox emerges as a titan of the code, a master of the joystick, and a virtuoso of melodies. With a keyboard as their wand, Micah crafts intricate digital realms where lines of code orchestrate symphonies of logic and innovation. They navigate gaming landscapes with the finesse of a seasoned strategist, conquering quests and challenges with unwavering determination.",
   },
   {
     id: 2,
-    imageUrl: "public/assets/aboutPictures/selfieP2.png",
+    imageUrl: "/assets/aboutPictures/selfieP2.png",
     paragraph:
       "Beyond the pixels and polygons, Micah finds solace in the harmonies of music, where strings and keys become their playground. From soaring guitar riffs to delicate piano melodies, they wield music as a canvas for expression, creating compositions that resonate deeply with their soul.",
   },
   {
     id: 3,
-    imageUrl: "public/assets/aboutPictures/selfieP3.png",
+    imageUrl: "/assets/aboutPictures/selfieP3.png",
     paragraph:
       "In the epic saga of Micah Cox, the worlds of coding, gaming, and music converge, forming a tapestry of creativity and passion that knows no bounds. With each line of code, each gaming triumph, and each musical masterpiece, Micah leaves an indelible mark on the digital landscape, inspiring all who encounter their legendary exploits.",
   },
@@ -31,7 +31,7 @@ function About() {
       return (
         <div
           key={content.id}
-          className="grid grid-flow-row grid-cols-3 py-10 gap-10 px-20 justify-items-center items-center"
+          className="grid grid-flow-rnpow grid-cols-3 py-10 gap-10 px-20 justify-items-center items-center"
         >
           <img
             className="h-96 w-96 rounded-full object-cover object-center"
