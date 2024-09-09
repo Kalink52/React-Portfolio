@@ -1,12 +1,13 @@
 {
   "name": "react-portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "cd Portfolio && npm start",
   "main": "index.js",
  
   "scripts": {
     "start": "cd Portfolio/ && npm run dev ;",
-    "build": "vite build",
+    "build": "cd Portfolio/ && npm run build",,
+    "install": "cd Portfolio/ && npm install",
     "lint": "eslint .",
     "preview": "vite preview"
   },

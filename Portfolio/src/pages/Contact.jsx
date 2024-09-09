@@ -13,7 +13,7 @@ import {
   Typography,
   Textarea
 } from "@material-tailwind/react";
-import { useState } from "react";
+import { isValidElement, useState } from "react";
  
 export default function SimpleRegistrationForm() {
   const [termsAccepted, setTermsAccepted] = useState(false)
@@ -46,7 +46,7 @@ export default function SimpleRegistrationForm() {
             label="First and Last Name"
             className="invalid:text-red-800"
             pattern="^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)"
-            onInvalid={(valid) => {console.log(valid) }}
+            // Use this for out of focus onBlur={}
           />
           <Input
             size="lg"
