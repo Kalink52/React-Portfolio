@@ -5,9 +5,9 @@
   "main": "index.js",
  
   "scripts": {
-    "start": "cd Portfolio/ && npm run dev ;",
-    "build": "cd Portfolio/ && vite build ",
-    "install": "cd Portfolio/ && npm i",
+    "start": "cd Portfolio && npm run dev",
+    "build": "cd Portfolio && npm run build ",
+    "install": "cd Portfolio && npm i",
     "lint": "eslint .",
     "preview": "vite preview"
   },
