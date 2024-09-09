@@ -6,7 +6,7 @@
  
   "scripts": {
     "start": "cd Portfolio/ && npm run dev ;",
-    "build": "cd Portfolio/ && npm run build ",
+    "build": "cd Portfolio/ && vite build ",
     "install": "cd Portfolio/ && npm i",
     "lint": "eslint .",
     "preview": "vite preview"
