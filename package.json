@@ -6,8 +6,8 @@
  
   "scripts": {
     "start": "cd Portfolio/ && npm run dev ;",
-    "build": "cd Portfolio/ && npm run build",
-    "install": "cd Portfolio/ && npm install",
+    "build": "cd Portfolio/ && npm run ",
+    "install": "cd Portfolio/ && npm i",
     "lint": "eslint .",
     "preview": "vite preview"
   },
