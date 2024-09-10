@@ -1,16 +1,25 @@
 # Portfolio
-a personal portfolio made with react
+A personal portfolio made with react
 
 ## Deployed Link
  [![Netlify Status](https://api.netlify.com/api/v1/badges/eff3773c-8325-40ac-949f-20e5eecc683b/deploy-status)](https://app.netlify.com/sites/gentle-kitten-8b0b74/deploys)
 
- click here
+ [https://gentle-kitten-8b0b74.netlify.app/](https://gentle-kitten-8b0b74.netlify.app/)
+
+
 ## Table of Contents
 - [Portfolio](#portfolio)
   - [Deployed Link](#deployed-link)
   - [Table of Contents](#table-of-contents)
+  - [Usage](#usage)
+  - [Installation](#installation)
   - [resources](#resources)
 
+## Usage
+You should've have any need for the contents of this repo.Go to the deployed link 
+
+## Installation
+You shouldn't have any need to install this repo.Go to the deployed.
 
 ## resources
 - tailwindcss: https://tailwindcss.com
