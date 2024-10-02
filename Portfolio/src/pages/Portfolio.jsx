@@ -69,7 +69,7 @@ const portfolioList = [
 function Portfolio() {
   const portfolioCardList = portfolioList.map((portfolio) => {
     return (
-      <Card key={portfolio.id} className="mt-5 w-96 ">
+      <Card key={portfolio.id} className="mt-5 lg:w-96 ">
         <CardBody>
           <Typography color="blue-gray" className="relative h-56">
             <img src={portfolio.pictureURL} alt="card-image" />
@@ -93,11 +93,11 @@ function Portfolio() {
 
   return (
     <>
-      <h1 className="flex justify-center size-11">
+      <h1 className="flex justify-center text-2xl ">
         Note Deployed links are using render which takes about a few minutes to
         load.
       </h1>
-      <div className="grid grid-flow-row grid-cols-2 grid-rows-3 py-10  gap-10 px-20 justify-items-center">
+      <div className="grid grid-flow-row lg:grid-cols-3 auto-rows-auto py-10 gap-10 mx-40 justify-items-center md:grid-cols-2">
         {portfolioCardList}
       </div>
     </>
