@@ -14,7 +14,7 @@ const portfolioList = [
   {
     id: 0,
     title: "Isabelles bead shop",
-    description: "Here is an e-commerce site i assisted in making for a client",
+    description: "Here is an e-commerce site I assisted in making for a client",
     pictureURL: "/assets/portfolioPictures/Isabelle's Bead Shop.PNG",
     deployedUrl: "https://isabelles-bead-shop.onrender.com/",
     repoUrl: "https://github.com/hannahschwen/isabelles-bead-shop",
@@ -22,7 +22,8 @@ const portfolioList = [
   {
     id: 1,
     title: "Unreal Engine",
-    description: "Here is my projects using UE4 and their public status",
+    description:
+      "Here is my projects using UE4 and their public status, a lot of learning and experimenting for future learning.",
     pictureURL: "/assets/portfolioPictures/UnrealEngine.PNG",
     deployedUrl: "",
     repoUrl: "https://github.com/Kalink52/FableClone",
@@ -40,7 +41,7 @@ const portfolioList = [
     id: 3,
     title: "Green Acres",
     description:
-      "TODO REDO ALL HTML AND CSS and Render from my account NOT WORKING AS DATABASE IS DEPRECATED",
+      "An application using sequelize SQL and handlebars, TODO REDO ALL HTML AND CSS and Render from my account NOT WORKING AS DATABASE IS DEPRECATED",
     pictureURL: "/assets/portfolioPictures/GreenAcres.PNG",
     deployedUrl: "https://green-acres.onrender.com",
     repoUrl: "https://github.com/Kalink52/Green-Acres",
@@ -49,7 +50,7 @@ const portfolioList = [
     id: 4,
     title: "Tune Tracker",
     description:
-      "My first collaboration attempt just to  figure out gitflow, and introducing using Apis,",
+      "My first collaboration attempt just to figure out gitflow, and introducing using APIs.",
     pictureURL: "/assets/portfolioPictures/TuneTracker.PNG",
     deployedUrl:
       "https://github.com/Kalink52/tune_tracker/deployments/github-pages",
@@ -59,7 +60,7 @@ const portfolioList = [
     id: 5,
     title: "Book Buddies",
     description:
-      "TODO: GET TO SHOW ON RENDER. A project a colleague was working on where they needed me to redo their SQL database. I had to work with them to figure out the type of relationships their database needed and assisted in incorporating it into the database using Postgres. ",
+      "A project a colleague was working on where they needed me to redo their SQL database. I had to work with them to figure out the type of relationships their database needed and assisted in incorporating it into the database using Postgres. TODO: GET TO SHOW ON RENDER, and waiting for them to finish the front end. Most likely an abandoned project",
     pictureURL: "/assets/portfolioPictures/BookBuddies.PNG",
     deployedUrl: "https://book-buddies.onrender.com",
     repoUrl: "https://github.com/Kalink52/book-buddies/tree/main",
@@ -71,8 +72,12 @@ function Portfolio() {
     return (
       <Card key={portfolio.id} className="mt-5 lg:w-96 ">
         <CardBody>
-          <Typography color="blue-gray" className="flex justify-center relative h-56">
-            <img className="object-cover h-56 justify-center"
+          <Typography
+            color="blue-gray"
+            className="flex justify-center relative h-56"
+          >
+            <img
+              className="object-cover h-56 justify-center"
               src={portfolio.pictureURL}
               alt="card-image"
             />
