@@ -10,7 +10,12 @@ export default withMT({
         black: "#222831",
         "dark-gray": "#31363F",
         "light-blue": "#76ABAE",
-        white: "#EEEEEE",
+        white: "#FFFFFF",
+      },
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+        serif: ["Roboto Slab", "serif"],
+        body: ["Roboto", "sans-serif"],
       },
     },
   },

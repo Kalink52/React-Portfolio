@@ -58,10 +58,7 @@ function Header() {
         <div className="bg-white dark:bg-light-blue rounded shadow-lg py-5 px-7">
           <nav className="flex justify-between">
             <div className="flex items-center space-x-3 lg:pr-16 pr-6">
-              <img
-                src="/assets/svgs/about/gamepad.svg"
-                alt="logo no gogo"
-              />
+              <img src="/assets/svgs/about/gamepad.svg" alt="logo no gogo" />
               <h2 className="font-normal text-2xl leading-6 text-gray-800 dark:text-beige">
                 Micah Cox
               </h2>
@@ -69,7 +66,7 @@ function Header() {
             <div>
               {makeNav}
               <a
-                href="/assets/resume/Resume2024.pdf"
+                href="https://docs.google.com/document/d/1IM39jkgJv8Owo1UvIh7hwYvaNbHcR4iKf7VWTeXcx0E/edit?usp=sharing"
                 target="_blank"
                 className="rounded-md bg-black dark:bg-white dark:text-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-blue-700 focus:shadow-none active:bg-blue-700 hover:bg-blue-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               >

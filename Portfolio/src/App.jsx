@@ -1,8 +1,6 @@
-
-import { Outlet } from 'react-router-dom';
-import './App.css'
-import Header from './components/header.jsx'
-import Footer from './components/footer.jsx'
+import { Outlet } from "react-router-dom";
+import Header from "./components/header.jsx";
+import Footer from "./components/footer.jsx";
 
 import { ThemeProvider } from "@material-tailwind/react";
 function App() {
@@ -10,15 +8,15 @@ function App() {
 
   return (
     <>
-    <ThemeProvider>
-      <Header />
-      <div className='body dark:text-white'>
-      <Outlet />
-      </div>
-      <Footer />
-    </ThemeProvider>
+      <ThemeProvider>
+        <Header />
+        <div className="min-h-65 dark:text-white">
+          <Outlet />
+        </div>
+        <Footer />
+      </ThemeProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

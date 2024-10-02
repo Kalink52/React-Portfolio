@@ -12,6 +12,14 @@ const buttonStyling =
 // TODO PERSONAL: Use Github api to display last commit, and last commit message
 const portfolioList = [
   {
+    id: 0,
+    title: "Isabelles bead shop",
+    description: "Here is an e-commerce site i assisted in making for a client",
+    pictureURL: "/assets/portfolioPictures/Isabelle's Bead Shop.PNG",
+    deployedUrl: "https://isabelles-bead-shop.onrender.com/",
+    repoUrl: "https://github.com/hannahschwen/isabelles-bead-shop",
+  },
+  {
     id: 1,
     title: "Unreal Engine",
     description: "Here is my projects using UE4 and their public status",
@@ -42,7 +50,7 @@ const portfolioList = [
     title: "Tune Tracker",
     description:
       "My first collaboration attempt just to  figure out gitflow, and introducing using Apis,",
-    pictureURL: "public/assets/portfolioPictures/TuneTracker.PNG",
+    pictureURL: "/assets/portfolioPictures/TuneTracker.PNG",
     deployedUrl:
       "https://github.com/Kalink52/tune_tracker/deployments/github-pages",
     repoUrl: "https://github.com/Kalink52/tune_tracker",
@@ -55,14 +63,6 @@ const portfolioList = [
     pictureURL: "/assets/portfolioPictures/BookBuddies.PNG",
     deployedUrl: "https://book-buddies.onrender.com",
     repoUrl: "https://github.com/Kalink52/book-buddies/tree/main",
-  },
-  {
-    id: 6,
-    title: "Unreal Engine",
-    description: "Here is my projects using UE4 and their public status",
-    pictureURL: "/assets/portfolioPictures/UnrealEngine.PNG",
-    deployedUrl: "",
-    repoUrl: "",
   },
 ];
 
@@ -93,6 +93,10 @@ function Portfolio() {
 
   return (
     <>
+      <h1 className="flex justify-center size-11">
+        Note Deployed links are using render which takes about a few minutes to
+        load.
+      </h1>
       <div className="grid grid-flow-row grid-cols-2 grid-rows-3 py-10  gap-10 px-20 justify-items-center">
         {portfolioCardList}
       </div>
