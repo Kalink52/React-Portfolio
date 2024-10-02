@@ -71,8 +71,11 @@ function Portfolio() {
     return (
       <Card key={portfolio.id} className="mt-5 lg:w-96 ">
         <CardBody>
-          <Typography color="blue-gray" className="relative h-56">
-            <img src={portfolio.pictureURL} alt="card-image" />
+          <Typography color="blue-gray" className="flex justify-center relative h-56">
+            <img className="object-cover h-56 justify-center"
+              src={portfolio.pictureURL}
+              alt="card-image"
+            />
           </Typography>
           <Typography variant="h5" color="blue-gray" className="mb-2">
             {portfolio.title}
