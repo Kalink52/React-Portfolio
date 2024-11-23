@@ -105,7 +105,7 @@ function Portfolio() {
         Note Deployed links are using render which takes about a few minutes to
         load.
       </h1>
-      <div className="grid grid-flow-row lg:grid-cols-3 auto-rows-auto py-10 gap-10 mx-40 justify-items-center md:grid-cols-2">
+      <div className="grid grid-flow-row grid-cols-1 auto-rows-auto py-10 gap-10 mx-5 justify-items-center lg:grid-cols-2 lg:mx-28 2xl:grid-cols-3 2xl:mx-16">
         {portfolioCardList}
       </div>
     </>

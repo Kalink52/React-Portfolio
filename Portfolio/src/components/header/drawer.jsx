@@ -16,8 +16,13 @@ export function NavDrawer(prop) {
 
   return (
     <>
-      <div className="flex justify-between">
-        <img src="/assets/svgs/about/gamepad.svg" alt="logo no gogo" />
+      <div className="flex justify-between bg-white dark:bg-light-blue rounded shadow-lg py-5 px-7">
+        <div className="flex items-center space-x-3 lg:pr-16 pr-6">
+          <img src="/assets/svgs/about/gamepad.svg" alt="logo no gogo" />
+          <h2 className="font-normal text-2xl leading-6 text-gray-800 dark:text-beige">
+            Micah Cox
+          </h2>
+        </div>
         <Button onClick={openDrawer}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +46,7 @@ export function NavDrawer(prop) {
           {navList.map((nav) => {
             return (
               <NavLink
-                to={nav.navUrl}
+                to={nav.navURL}
                 key={nav.id}
                 className="flex justify-center w-full border border-slate-200 rounded-md py-2 my-2 "
               >
