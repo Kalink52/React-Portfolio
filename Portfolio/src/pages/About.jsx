@@ -24,48 +24,54 @@ const paragraphWithPictureList = [
       "In the epic saga of Micah Cox, the worlds of coding, gaming, and music converge, forming a tapestry of creativity and passion that knows no bounds. With each line of code, each gaming triumph, and each musical masterpiece, Micah leaves an indelible mark on the digital landscape, inspiring all who encounter their legendary exploits.",
   },
 ];
-
+function PicOnLeft(content) {
+  return (
+    <div
+      key={content.id}
+      className="grid grid-flow-row grid-cols-2 py-10 gap-10 px-20 justify-items-center items-center lg:grid-cols-3"
+    >
+      <img
+        className="h-96 w-96 rounded-full object-cover object-center col-span-2 order-2 lg:col-span-1 lg:order-1"
+        src={content.imageUrl}
+        alt=""
+      />
+      <p key={content.id} className="col-span-2 order-1 ">
+        {content.paragraph}
+      </p>
+    </div>
+  );
+}
+function PicOnRight(content) {
+  return (
+    <div
+      key={content.id}
+      className="grid grid-flow-row grid-cols-2 py-10 gap-10 px-20 justify-items-center items-center  lg:grid-cols-3"
+    >
+      <p key={content.id} className="col-span-2">
+        {content.paragraph}
+      </p>
+      <img
+        className="h-96 w-96 rounded-full object-cover object-center col-span-2 lg:col-span-1"
+        src={content.imageUrl}
+        alt=""
+      />
+    </div>
+  );
+}
 function About() {
-  const contentList = paragraphWithPictureList.map((content) => {
-    if (content.id % 2) {
-      return (
-        <div
-          key={content.id}
-          className="grid grid-flow-rnpow grid-cols-3 py-10 gap-10 px-20 justify-items-center items-center"
-        >
-          <img
-            className="h-96 w-96 rounded-full object-cover object-center"
-            src={content.imageUrl}
-            alt=""
-          />
-          <p key={content.id} className="col-span-2">
-            {content.paragraph}
-          </p>
-        </div>
-      );
-    } else {
-      return (
-        <div
-          key={content.id}
-          className="grid grid-flow-row grid-cols-3 py-10 gap-10 px-20 justify-items-center items-center"
-        >
-          <p key={content.id} className="col-span-2">
-            {content.paragraph}
-          </p>
-          <img
-            className="h-96 w-96 rounded-full object-cover object-center"
-            src={content.imageUrl}
-            alt=""
-          />
-        </div>
-      );
-    }
-  });
-
   return (
     <>
-      <div className="grid grid-flow-row grid-cols-1 grid-rows-3 ">
-        {contentList}
+      <div className="flex justify-center text-4xl font-bold ">
+        Meet the Programmer
+      </div>
+      <div className="grid grid-flow-row grid-cols-1 grid-rows-3">
+        {paragraphWithPictureList.map((content) => {
+          if (content.id % 2 !== 0) {
+            return PicOnLeft(content);
+          } else {
+            return PicOnRight(content);
+          }
+        })}
       </div>
     </>
   );

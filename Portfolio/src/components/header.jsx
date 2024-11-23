@@ -1,13 +1,11 @@
-// TODO
-// WHEN I view the header
-// THEN I am presented with the developer's name and navigation with titles corresponding to different sections of the portfolio
-// WHEN I view the navigation titles
-// THEN I am presented with the titles About Me, Portfolio, Contact, and Resume, and the title corresponding to the current section is highlighted
-// WHEN I click on a navigation title
-// THEN the browser URL changes and I am presented with the corresponding section below the navigation and that title is highlighted
 import { NavLink } from "react-router-dom";
 import darkMode from "../utilities/darkmode";
 import Toggle from "./CustomTailwind/toggle";
+import { useState, useEffect } from "react";
+import { NavDrawer } from "./header/drawer";
+// controls the medita query for the navigation menu.
+
+const WindowSize = 748;
 
 const navList = [
   {
@@ -33,9 +31,19 @@ const defaultNavButtonStyling =
   "rounded-md border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none";
 
 const activeNavButtonStyling =
-  "rounded-md bg-blue-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-blue-700 focus:shadow-none active:bg-blue-700 hover:bg-blue-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none m-5";
+  "rounded-md bg-blue-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-blue-700 focus:shadow-none active:bg-blue-700 hover:bg-blue-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none m-5 ";
 
 function Header() {
+  const [isDesktop, setDesktop] = useState(window.innerWidth > WindowSize);
+  console.log(isDesktop);
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > WindowSize);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
   const makeNav = navList.map((nav) => {
     return (
       <NavLink
@@ -51,6 +59,9 @@ function Header() {
       </NavLink>
     );
   });
+  if (!isDesktop) {
+    return <NavDrawer navList={navList} />;
+  }
 
   return (
     <>
