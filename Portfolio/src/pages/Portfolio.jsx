@@ -70,7 +70,7 @@ const portfolioList = [
 function Portfolio() {
   const portfolioCardList = portfolioList.map((portfolio) => {
     return (
-      <Card key={portfolio.id} className="mt-5 lg:w-96 ">
+      <Card key={portfolio.id} className="mt-5 w-96 ">
         <CardBody>
           <Typography
             color="blue-gray"
