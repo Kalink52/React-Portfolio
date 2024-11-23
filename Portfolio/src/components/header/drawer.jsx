@@ -54,6 +54,13 @@ export function NavDrawer(prop) {
               </NavLink>
             );
           })}
+          <a
+            href="https://docs.google.com/document/d/1IM39jkgJv8Owo1UvIh7hwYvaNbHcR4iKf7VWTeXcx0E/edit?usp=sharing"
+            target="_blank"
+            className="flex justify-center text-white  bg-black dark:bg-white  dark:text-black w-full border border-slate-200 rounded-md py-2 my-2"
+          >
+            Resume
+          </a>
         </div>
       </Drawer>
     </>
