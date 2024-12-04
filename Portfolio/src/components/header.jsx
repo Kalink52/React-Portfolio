@@ -3,9 +3,9 @@ import darkMode from "../utilities/darkmode";
 import Toggle from "./CustomTailwind/toggle";
 import { useState, useEffect } from "react";
 import { NavDrawer } from "./header/drawer";
-// controls the medita query for the navigation menu.
 
-const WindowSize = 748;
+// controls the pixel check to check if your on a  desktop
+const WINDOWSIZE = 748;
 
 const navList = [
   {
@@ -34,12 +34,10 @@ const activeNavButtonStyling =
   "rounded-md bg-blue-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-blue-700 focus:shadow-none active:bg-blue-700 hover:bg-blue-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none m-5 ";
 
 function Header() {
-  const [isDesktop, setDesktop] = useState(window.innerWidth > WindowSize);
-  console.log(isDesktop);
+  const [isDesktop, setDesktop] = useState(window.innerWidth > WINDOWSIZE);
   const updateMedia = () => {
-    setDesktop(window.innerWidth > WindowSize);
+    setDesktop(window.innerWidth > WINDOWSIZE);
   };
-
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);

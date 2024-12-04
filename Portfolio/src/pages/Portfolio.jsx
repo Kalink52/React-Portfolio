@@ -12,42 +12,35 @@ const buttonStyling =
 // TODO PERSONAL: Use Github api to display last commit, and last commit message
 const portfolioList = [
   {
-    id: 0,
     title: "Isabelles bead shop",
     description: "Here is an e-commerce site I assisted in making for a client",
     pictureURL: "/assets/portfolioPictures/Isabelle's Bead Shop.PNG",
-    deployedUrl: "https://isabelles-bead-shop.onrender.com/",
+    deployedUrl: "https://isabellesbeadshop.onrender.com/",
     repoUrl: "https://github.com/hannahschwen/isabelles-bead-shop",
   },
   {
-    id: 1,
-    title: "Unreal Engine",
+    title: "Destiny Maker",
     description:
-      "Here is my projects using UE4 and their public status, a lot of learning and experimenting for future learning.",
-    pictureURL: "/assets/portfolioPictures/UnrealEngine.PNG",
-    deployedUrl: "",
-    repoUrl: "https://github.com/Kalink52/FableClone",
+      "An to make a baulders gate character Creator. This is a work in progress the characters were more complicated than I thought. ",
+    pictureURL: "/assets/portfolioPictures/DestinyMaker.PNG",
+    // deployedUrl: "https://isabellesbeadshop.onrender.com/",
+    repoUrl: "https://github.com/Kalink52/DestinyMaker",
   },
   {
-    id: 2,
     title: "Tech Blog",
-    description:
-      "An attempt at making a tech blog application with authentication",
+    description: "A tech blog application with authentication",
     pictureURL: "/assets/portfolioPictures/Dashboard.PNG",
     deployedUrl: "https://tech-blog-kisx.onrender.com/",
     repoUrl: "https://github.com/Kalink52/tech-blog",
   },
   {
-    id: 3,
     title: "Green Acres",
     description:
       "An application using sequelize SQL and handlebars, TODO REDO ALL HTML AND CSS and Render from my account NOT WORKING AS DATABASE IS DEPRECATED",
     pictureURL: "/assets/portfolioPictures/GreenAcres.PNG",
-    deployedUrl: "https://green-acres.onrender.com",
     repoUrl: "https://github.com/Kalink52/Green-Acres",
   },
   {
-    id: 4,
     title: "Tune Tracker",
     description:
       "My first collaboration attempt just to figure out gitflow, and introducing using APIs.",
@@ -57,20 +50,18 @@ const portfolioList = [
     repoUrl: "https://github.com/Kalink52/tune_tracker",
   },
   {
-    id: 5,
     title: "Book Buddies",
     description:
       "A project a colleague was working on where they needed me to redo their SQL database. I had to work with them to figure out the type of relationships their database needed and assisted in incorporating it into the database using Postgres. TODO: GET TO SHOW ON RENDER, and waiting for them to finish the front end. Most likely an abandoned project",
     pictureURL: "/assets/portfolioPictures/BookBuddies.PNG",
-    deployedUrl: "https://book-buddies.onrender.com",
     repoUrl: "https://github.com/Kalink52/book-buddies/tree/main",
   },
 ];
 
 function Portfolio() {
-  const portfolioCardList = portfolioList.map((portfolio) => {
+  const portfolioCardList = portfolioList.map((portfolio, index) => {
     return (
-      <Card key={portfolio.id} className="mt-5 w-96 ">
+      <Card key={index} className="mt-5 w-96 ">
         <CardBody>
           <Typography
             color="blue-gray"
@@ -88,9 +79,11 @@ function Portfolio() {
           <Typography>{portfolio.description}</Typography>
         </CardBody>
         <CardFooter className="pt-0">
-          <a href={portfolio.deployedUrl} className={`mr-2 ${buttonStyling}`}>
-            Deployed
-          </a>
+          {portfolio.deployedUrl && (
+            <a href={portfolio.deployedUrl} className={`mr-2 ${buttonStyling}`}>
+              Deployed
+            </a>
+          )}
           <a href={portfolio.repoUrl} className={`ml-2 ${buttonStyling}`}>
             GitHub
           </a>
