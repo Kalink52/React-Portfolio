@@ -4,7 +4,7 @@ A personal portfolio made with react
 ## Deployed Link
  [![Netlify Status](https://api.netlify.com/api/v1/badges/eff3773c-8325-40ac-949f-20e5eecc683b/deploy-status)](https://app.netlify.com/sites/gentle-kitten-8b0b74/deploys)
 
- [https://gentle-kitten-8b0b74.netlify.app/](https://gentle-kitten-8b0b74.netlify.app/)
+ [https://micah-cox.netlify.app/](https://micah-cox.netlify.app/)
 
 
 ## Table of Contents
