@@ -12,24 +12,24 @@ const buttonStyling =
 // TODO PERSONAL: Use Github api to display last commit, and last commit message
 const portfolioList = [
   {
-    title: "Isabelles bead shop",
+    title: "Isabelle's bead shop",
     description: "Here is an e-commerce site I assisted in making for a client",
-    pictureURL: "/assets/portfolioPictures/Isabelle's Bead Shop.PNG",
+    pictureURL: "/assets/portfolioPictures/Isabelle's Bead Shop.png",
     deployedUrl: "https://isabellesbeadshop.onrender.com/",
     repoUrl: "https://github.com/hannahschwen/isabelles-bead-shop",
   },
   {
     title: "Destiny Maker",
     description:
-      "An to make a baulders gate character Creator. This is a work in progress the characters were more complicated than I thought. ",
-    pictureURL: "/assets/portfolioPictures/DestinyMaker.PNG",
+      "An attempt to make a Baldur's gate character Creator. This is a work in progress the characters were more complicated than I thought. ",
+    pictureURL: "/assets/portfolioPictures/DestinyMaker.png",
     // deployedUrl: "https://isabellesbeadshop.onrender.com/",
     repoUrl: "https://github.com/Kalink52/DestinyMaker",
   },
   {
     title: "Tech Blog",
     description: "A tech blog application with authentication",
-    pictureURL: "/assets/portfolioPictures/Dashboard.PNG",
+    pictureURL: "/assets/portfolioPictures/Dashboard.png",
     deployedUrl: "https://tech-blog-kisx.onrender.com/",
     repoUrl: "https://github.com/Kalink52/tech-blog",
   },
@@ -37,14 +37,14 @@ const portfolioList = [
     title: "Green Acres",
     description:
       "An application using sequelize SQL and handlebars, TODO REDO ALL HTML AND CSS and Render from my account NOT WORKING AS DATABASE IS DEPRECATED",
-    pictureURL: "/assets/portfolioPictures/GreenAcres.PNG",
+    pictureURL: "/assets/portfolioPictures/GreenAcres.png",
     repoUrl: "https://github.com/Kalink52/Green-Acres",
   },
   {
     title: "Tune Tracker",
     description:
       "My first collaboration attempt just to figure out gitflow, and introducing using APIs.",
-    pictureURL: "/assets/portfolioPictures/TuneTracker.PNG",
+    pictureURL: "/assets/portfolioPictures/TuneTracker.png",
     deployedUrl:
       "https://github.com/Kalink52/tune_tracker/deployments/github-pages",
     repoUrl: "https://github.com/Kalink52/tune_tracker",
@@ -53,7 +53,7 @@ const portfolioList = [
     title: "Book Buddies",
     description:
       "A project a colleague was working on where they needed me to redo their SQL database. I had to work with them to figure out the type of relationships their database needed and assisted in incorporating it into the database using Postgres. TODO: GET TO SHOW ON RENDER, and waiting for them to finish the front end. Most likely an abandoned project",
-    pictureURL: "/assets/portfolioPictures/BookBuddies.PNG",
+    pictureURL: "assets/portfolioPictures/BookBuddies.png",
     repoUrl: "https://github.com/Kalink52/book-buddies/tree/main",
   },
 ];
