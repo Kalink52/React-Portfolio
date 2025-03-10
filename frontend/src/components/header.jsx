@@ -6,6 +6,8 @@ import { NavDrawer } from "./header/drawer";
 
 // controls the pixel check to check if your on a  desktop
 const WINDOWSIZE = 748;
+const RESUMELINK =
+  "https://docs.google.com/document/d/1-BdtjSeD-9IsXyLWZ8ooWT7A8X7Jezes/edit";
 
 const navList = [
   {
@@ -75,7 +77,7 @@ function Header() {
             <div>
               {makeNav}
               <a
-                href="https://docs.google.com/document/d/1IM39jkgJv8Owo1UvIh7hwYvaNbHcR4iKf7VWTeXcx0E/edit?usp=sharing"
+                href={RESUMELINK}
                 target="_blank"
                 className="rounded-md bg-black dark:bg-white dark:text-black py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-blue-700 focus:shadow-none active:bg-blue-700 hover:bg-blue-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               >
