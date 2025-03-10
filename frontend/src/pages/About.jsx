@@ -9,20 +9,20 @@ const paragraphWithPictureList = [
     id: 1,
     imageUrl: "/assets/aboutPictures/selfieP.jpg",
     paragraph:
-      "In the digital cosmos where algorithms dance and virtual worlds thrive, Micah Cox emerges as a titan of the code, a master of the joystick, and a virtuoso of melodies. With a keyboard as their wand, Micah crafts intricate digital realms where lines of code orchestrate symphonies of logic and innovation. They navigate gaming landscapes with the finesse of a seasoned strategist, conquering quests and challenges with unwavering determination.",
+      "I am a junior developer with a strong foundation in full-stack web development, specializing in JavaScript, Node.js, and database management. With a background in both SQL and NoSQL databases, I have experience designing and optimizing data structures to support dynamic applications. My experience extends to front-end technologies like React and Angular, allowing me to create interactive and responsive user interfaces. I am passionate about building efficient, scalable solutions and continuously expanding my knowledge of modern development practices.",
   },
   {
     id: 2,
     imageUrl: "/assets/aboutPictures/selfieP2.png",
     paragraph:
-      "Beyond the pixels and polygons, Micah finds solace in the harmonies of music, where strings and keys become their playground. From soaring guitar riffs to delicate piano melodies, they wield music as a canvas for expression, creating compositions that resonate deeply with their soul.",
+      "In addition to my technical skills, I have a strong problem-solving mindset and a keen eye for detail. I enjoy breaking down complex challenges and implementing practical, well-structured solutions. My experience working on diverse projects, from character builders to task management applications, has given me a deep understanding of user needs and application workflows. I also have experience integrating APIs, managing authentication, and ensuring seamless communication between front-end and back-end systems.",
   },
-  {
-    id: 3,
-    imageUrl: "/assets/aboutPictures/selfieP3.png",
-    paragraph:
-      "In the epic saga of Micah Cox, the worlds of coding, gaming, and music converge, forming a tapestry of creativity and passion that knows no bounds. With each line of code, each gaming triumph, and each musical masterpiece, Micah leaves an indelible mark on the digital landscape, inspiring all who encounter their legendary exploits.",
-  },
+  // {
+  //   id: 3,
+  //   imageUrl: "/assets/aboutPictures/selfieP3.png",
+  //   paragraph:
+  //     "I am always eager to learn and grow as a developer, staying up to date with the latest technologies and best practices in software development. Whether working independently or collaborating with a team, I strive to deliver high-quality code that meets project requirements and enhances user experience. My goal is to contribute to innovative projects that make an impact, leveraging my skills to create intuitive and efficient applications.",
+  // },
 ];
 function PicOnLeft(content) {
   return (

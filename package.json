@@ -4,9 +4,9 @@
   "description": "cd Portfolio && npm start",
   "main": "index.js",
   "scripts": {
-    "start": "cd Portfolio && npm run dev",
-    "build": "cd Portfolio && npm run build ",
-    "install": "cd Portfolio && npm i",
+    "start": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build ",
+    "install": "cd frontend && npm i",
     "lint": "eslint .",
     "preview": "vite preview"
   },
